@@ -71,14 +71,13 @@ ul#box {
     list-style-type: none;
 }
 
-ul#box li{
-    border-bottom: 1ps solid #0291ff;
+ul#box li {
+    border-bottom: 0.5px solid #0291ff7e;
     padding: 1em 0;
     color: #ffc800;
     font-weight: bold;
 }
 
-ul#box li a{
+ul#box li a {
     float: right;
 }
-
