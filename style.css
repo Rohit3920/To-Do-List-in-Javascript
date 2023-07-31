@@ -12,6 +12,8 @@ body {
     display: flex;
 }
 
+
+
 .container {
     background: linear-gradient(#0291ff, #ffc800);
     display: flex;
@@ -37,6 +39,14 @@ body {
 .header {
     padding: 2em;
     text-align: center;
+}
+
+.header h1 .clearBtn{
+    padding: 0.5em;
+    background: rgba(255, 0, 0, 0.635);
+    color: white;
+    border-radius: 0.5em;
+    border: none;
 }
 
 .list {

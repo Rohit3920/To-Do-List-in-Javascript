@@ -6,6 +6,7 @@ const addItem = () => {
     let box = document.getElementById("box");
 
     let li = document.createElement('li');
+    li.style.textTransform = 'capitalize'
     li.textContent = inputValue;
 
 
@@ -42,4 +43,24 @@ delBtn.addEventListener('click', (e)=>{
     document.getElementById("count").innerHTML = box.childElementCount;
 
 })
+
+
+const clearAll = () =>{
+let cBtn = document.getElementById('clearBtn');
+cBtn.style.color = "red";
+cBtn.style.border = "1px solid red"
+cBtn.style.backgroundColor = "transparent";
+
+setTimeout(()=>{
+    let box = document.getElementById('box');
+    box.innerHTML = ''
+    document.getElementById("count").innerHTML = box.childElementCount;
+
+
+cBtn.style.color = "white";
+cBtn.style.border = "none"
+cBtn.style.backgroundColor = "rgba(255, 0, 0, 0.635)";
+}, 300)
+
+}
 
