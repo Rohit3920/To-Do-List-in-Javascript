@@ -1,5 +1,6 @@
 const addItem = () => {
-    let inputValue = document.getElementById("tbox-name").value;
+    let input = document.getElementById("tbox-name")
+    let inputValue = input.value;
     console.log(inputValue);
 
     let box = document.getElementById("box");
@@ -25,5 +26,20 @@ const addItem = () => {
         box.insertBefore(li, insertBefore)
     }
 
+    input.value = '';
+    input.focus()
+
+    document.getElementById("count").innerHTML = box.childElementCount;
+
 }
+
+let delBtn = document.querySelector('ul');
+delBtn.addEventListener('click', (e)=>{
+
+    let box = document.getElementById('box');
+    let li = e.target.parentNode;
+    box.removeChild(li);
+    document.getElementById("count").innerHTML = box.childElementCount;
+
+})
 
