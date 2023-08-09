@@ -21,9 +21,9 @@ const addItem = () => {
 
 
     let insertBefore = box.firstElementChild;
-    if(insertBefore == null){
+    if (insertBefore == null) {
         box.appendChild(li);
-    }else{
+    } else {
         box.insertBefore(li, insertBefore)
     }
 
@@ -31,11 +31,10 @@ const addItem = () => {
     input.focus()
 
     document.getElementById("count").innerHTML = box.childElementCount;
-
 }
 
 let delBtn = document.querySelector('ul');
-delBtn.addEventListener('click', (e)=>{
+delBtn.addEventListener('click', (e) => {
 
     let box = document.getElementById('box');
     let li = e.target.parentNode;
@@ -45,22 +44,21 @@ delBtn.addEventListener('click', (e)=>{
 })
 
 
-const clearAll = () =>{
-let cBtn = document.getElementById('clearBtn');
-cBtn.style.color = "red";
-cBtn.style.border = "1px solid red"
-cBtn.style.backgroundColor = "transparent";
+const clearAll = () => {
+    let cBtn = document.getElementById('clearBtn');
+    cBtn.style.color = "red";
+    cBtn.style.border = "1px solid red"
+    cBtn.style.backgroundColor = "transparent";
 
-setTimeout(()=>{
-    let box = document.getElementById('box');
-    box.innerHTML = ''
-    document.getElementById("count").innerHTML = box.childElementCount;
+    setTimeout(() => {
+        let box = document.getElementById('box');
+        box.innerHTML = ''
+        document.getElementById("count").innerHTML = box.childElementCount;
 
-
-cBtn.style.color = "white";
-cBtn.style.border = "none"
-cBtn.style.backgroundColor = "rgba(255, 0, 0, 0.635)";
-}, 300)
+        cBtn.style.color = "white";
+        cBtn.style.border = "none"
+        cBtn.style.backgroundColor = "rgba(255, 0, 0, 0.635)";
+    }, 300)
 
 }
 
